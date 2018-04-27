@@ -1,0 +1,16 @@
+{
+	"extends": [
+		"tslint:recommended",
+		"tslint-config-prettier",
+		"tslint-react"
+	],
+	"linterOptions": {
+		"exclude": [
+			"config/**/*.js",
+			"node_modules/**/*.ts"
+		]
+	},
+	"rules": {
+		"indent": [true, "tabs"]
+	}
+}
