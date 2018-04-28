@@ -11,6 +11,7 @@
 		]
 	},
 	"rules": {
-		"indent": [true, "tabs"]
+		"indent": [true, "tabs"],
+		"no-unused-expression": false
 	}
 }
