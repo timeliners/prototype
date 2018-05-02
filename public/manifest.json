@@ -1,6 +1,6 @@
 {
-	"short_name": "ChunkCan",
-	"name": "A faster BitBucket client",
+	"short_name": "Timeliners",
+	"name": "Developers timelines",
 	"icons": [
 		{
 			"src": "favicon.ico",
