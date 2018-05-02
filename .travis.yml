@@ -12,3 +12,10 @@ install:
   - npm ci
 script:
   - npm test
+deploy:
+  provider: script
+  script:
+    - npm run deploy -- --token=$NOW_TOKEN
+    - npm run alias -- --token=$NOW_TOKEN
+  on:
+    branch: master

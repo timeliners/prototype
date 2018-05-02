@@ -10,7 +10,9 @@
 		"test:code": "react-scripts-ts test --env=jsdom --coverage",
 		"test:compile": "tsc",
 		"test:lint": "tslint src/**/*.{ts,tsx}",
-		"test:security": "nsp check"
+		"test:security": "nsp check",
+		"deploy": "now ./build --public -e NODE_ENV=production",
+		"alias": "now alias"
 	},
 	"dependencies": {
 		"react": "^16.3.2",
@@ -27,6 +29,7 @@
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
 		"jest-enzyme": "^6.0.0",
+		"now": "^11.1.7",
 		"npm-run-all": "^4.1.2",
 		"nsp": "^3.2.1",
 		"react-scripts-ts": "2.15.1",

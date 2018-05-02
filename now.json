@@ -1,0 +1,10 @@
+{
+	"public": true,
+	"name": "prototype",
+	"type": "static",
+	"alias": [
+		"timeline.now.sh",
+		"timeliner.now.sh",
+		"timeliners.now.sh"
+	]
+}
