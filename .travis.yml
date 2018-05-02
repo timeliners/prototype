@@ -19,3 +19,4 @@ deploy:
   script: npm run now
   on:
     branch: master
+    node: lts/*
