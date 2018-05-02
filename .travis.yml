@@ -13,6 +13,8 @@ install:
 script:
   - npm test
   - npm run build
+after_success:
+  - npm run codecov
 deploy:
   provider: script
   skip_cleanup: true
