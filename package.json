@@ -11,8 +11,8 @@
 		"test:compile": "tsc",
 		"test:lint": "tslint src/**/*.{ts,tsx}",
 		"test:security": "nsp check",
-		"deploy": "now ./build --public -e NODE_ENV=production",
-		"alias": "now alias"
+		"deploy": "now  -A ../now.json ./build",
+		"alias": "now -A ../now.json alias"
 	},
 	"dependencies": {
 		"react": "^16.3.2",

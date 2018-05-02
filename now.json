@@ -6,5 +6,8 @@
 		"timeline.now.sh",
 		"timeliner.now.sh",
 		"timeliners.now.sh"
-	]
+	],
+	"env": {
+		"NODE_ENV": "production"
+	}
 }
