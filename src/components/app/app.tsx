@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './app.css';
-
+import Card from '../card';
 import logo from '../../logo.svg';
 
 export default function App() {
@@ -13,6 +13,8 @@ export default function App() {
 			<p className="App-intro">
 				To get started, edit <code>src/App.tsx</code> and save to reload.
 			</p>
+			<img src={logo} className="Profilepicture" alt="username" />
+			<Card />
 		</div>
 	);
 }

@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-	animation: App-logo-spin infinite 20s linear;
+	animation: App-logo-spin infinite 1s linear;
 	height: 80px;
 }
 
@@ -20,6 +20,17 @@
 
 .App-intro {
 	font-size: large;
+}
+
+.Profilepicture {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+  	display: inline-block;
+}
+
+.Profilepicture:hover {
+    box-shadow: 0 4px 8px 0 rgba(0.2,0,0,0.2);
 }
 
 @keyframes App-logo-spin {
