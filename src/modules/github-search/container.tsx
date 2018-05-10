@@ -47,6 +47,7 @@ export default class GithubSearchContainer extends React.Component<RouteComponen
 						value={this.state.username}
 						onChange={this.onUsernameChange}
 					/>
+					<button type='submit'>see events!</button>
 				</form>
 			</div>
 		);
