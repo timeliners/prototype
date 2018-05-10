@@ -36,7 +36,7 @@
 		"now": "^11.1.7",
 		"npm-run-all": "^4.1.2",
 		"nsp": "^3.2.1",
-		"react-scripts-ts": "2.15.1",
+		"react-scripts-ts": "^3.0.0",
 		"tslint": "^5.9.1",
 		"typescript": "^2.8.3"
 	}
