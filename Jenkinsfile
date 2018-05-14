@@ -8,17 +8,18 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'npm install'
+                npm install -g npm@latest
+				npm ci
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                npm test
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                npm run build
             }
         }
     }
