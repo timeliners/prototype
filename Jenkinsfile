@@ -1,13 +1,17 @@
 node {
-    stage 'Info'
+    stage('Info') {
         node --version
+    }
 
-    stage 'Prepare'
+    stage ('Prepare') {
         npm install
+    }
 
-    stage 'Test'
+    stage ('Test') {
         npm test
+    }
 
-    stage 'Build'
+    stage ('Build') {
         npm run build
+    }
 }
