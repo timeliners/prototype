@@ -9,6 +9,6 @@ interface IOptions {
 export default function fetchGithubEvents(username: string, options?: IOptions) {
 	const page = (options && options.page) || 1;
 
-	return fetch(`http://api.github.com/users/${username}/events/public?page=${page}`)
+	return fetch(`https://api.github.com/users/${username}/events/public?page=${page}`)
 		.then(response => response.json());
 }
