@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                npm install -g npm@latest
-				npm ci
+                npm install
             }
         }
         stage('Test') {
