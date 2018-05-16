@@ -13,6 +13,10 @@
 	"rules": {
 		"indent": [true, "tabs"],
 		"no-unused-expression": false,
-		"ordered-imports": false
+		"ordered-imports": false,
+		"jsx-boolean-value": false,
+		"member-ordering": false,
+		"no-console": false,
+		"jsx-no-multiline-js": false
 	}
 }
