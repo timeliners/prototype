@@ -1,13 +1,18 @@
 import * as React from 'react';
 import './card.css';
 
-export default function Card() {
+export interface IProps {
+	title: string;
+	subtitle: string;
+	timestamp: string;
+}
+
+export default function Card(props: IProps) {
 	return (
 		<div className="Card">
-			<h1>PushEvent</h1>
-			<h2>Timeliners/prototype</h2>
-			<p>started <br/>
-			16 May 2018 10:45:43</p>
+			<h1>{props.title}</h1>
+			<h2>{props.subtitle}</h2>
+			<p>{props.timestamp}</p>
 		</div>
 	);
 }
