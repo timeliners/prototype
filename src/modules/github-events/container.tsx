@@ -3,6 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 
 import fetchGithubEvents from './fetch';
 import GithubEventsList from './list';
+import './container.css';
 
 type ResponseStatus = 'pending' | 'fulfilled' | 'rejected';
 
@@ -116,7 +117,7 @@ export default class GithubEventsContainer extends React.Component<IProps, IStat
 				return (
 					<div>
 						<p>{`${content} for ${username}`}</p>
-						<Link to='/'>try another username</Link>
+						<Link to='/'><div className="Button">back</div></Link>
 					</div>
 				);
 
@@ -124,7 +125,7 @@ export default class GithubEventsContainer extends React.Component<IProps, IStat
 				return (
 					<div>
 						<p>{`Loading the events for ${username}`}</p>
-						<Link to='/'>try another username</Link>
+						<Link to='/'><div className="Button">back</div></Link>
 					</div>
 				);
 		}
@@ -135,11 +136,11 @@ export default class GithubEventsContainer extends React.Component<IProps, IStat
 	 */
 	public render() {
 		return (
-			<div>
-				{this.renderHeader()}
-				<GithubEventsList events={this.state.events} />
-				{this.hasMoreEvents() && <button onClick={this.onNextPageClick}>load more</button>}
-			</div>
+				<div>
+					{this.renderHeader()}
+					<GithubEventsList events={this.state.events} />
+						{this.hasMoreEvents() && <button onClick={this.onNextPageClick} className="Button">load<br />more</button>}
+				</div>
 		);
 	}
 }
