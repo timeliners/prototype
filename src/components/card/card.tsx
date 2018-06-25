@@ -11,7 +11,7 @@ export const titles = {
 	DeleteEvent: 'Deleted branch',
 	IssueCommentEvent: 'Commented',
 	IssuesEvent: 'Created issue',
-	PullRequestEvent: 'Request changes',
+	PullRequestEvent: 'Requested change',
 	PushEvent: 'Pushed update',
 	ReleaseEvent: 'Released version',
 };
