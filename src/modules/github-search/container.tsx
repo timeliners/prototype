@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Link } from 'react-router-dom';
+import classnames from 'classnames';
+import './container.css';
 
 interface IState {
 	/** The username to search for */
@@ -15,40 +17,34 @@ export default class GithubSearchContainer extends React.Component<RouteComponen
 	};
 
 	/**
-	 * Invoked when the user submits the GitHub username.
-	 * When this happens, the user should be redirected to a page with all the events of this account.
+	 * Invoked when the user changes the input content.
 	 */
-	private onFormSubmit = (event: React.FormEvent<{}>) => {
-		event.preventDefault();
-
-		if (this.state.username) {
-			this.props.history.push(`/${this.state.username}`);
-		}
-	};
+	private onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({ username: event.target.value });
+	}
 
 	/**
-	 * Invoked when the user changes the (GitHub) username input.
+	 * Get the full class name of the button.
 	 */
-	private onUsernameChange = (event: React.FormEvent<HTMLInputElement>) => {
-		this.setState({ username: event.currentTarget.value });
-	};
+	private get buttonClassName() {
+		return classnames('github-search__button', {
+			'-state-disabled': this.state.username.length <= 0,
+		});
+	}
 
 	/**
 	 * @inheritdoc
 	 */
 	public render() {
 		return (
-			<div>
-				<form onSubmit={this.onFormSubmit}>
-					<p>Enter the exact GitHub username of the person you are looking for</p>
-					<input
-						type='text'
-						name='username'
-						value={this.state.username}
-						onChange={this.onUsernameChange}
-					/>
-					<button type='submit'>see events!</button>
-				</form>
+			<div className="github-search">
+				<p className="github-search__intro">
+					Enter the exact GitHub username of the person you are looking for
+				</p>
+				<input type="text" className="github-search__input" onChange={this.onInputChange} />
+				<Link className={this.buttonClassName} to={this.state.username}>
+					see events!
+				</Link>
 			</div>
 		);
 	}

@@ -1,0 +1,25 @@
+.github-search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.github-search__intro,
+.github-search__input,
+.github-search__button {
+	display: block;
+	width: 300px;
+}
+
+.github-search__button {
+	text-align: center;
+}
+
+.github-search__button.-state-disabled {
+	opacity: 0.2;
+	pointer-events: none;
+	user-select: none;
+}
