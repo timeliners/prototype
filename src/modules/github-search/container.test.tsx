@@ -22,7 +22,13 @@ describe('modules/github-search/container', () => {
 		expect(component.find('.github-search__button')).toExist();
 	});
 
-	it('updates link when name is entered', () => {
+	it('renders link as disabled when no input is provided', () => {
+		const link = component.find('.github-search__button').first();
+
+		expect(link.hasClass('-state-disabled')).toBeTruthy();
+	});
+
+	it('renders link as enabled when input is provided', () => {
 		component.find('.github-search__input').simulate('change', { target: { value: 'githubUser' } });
 		const link = component.find('.github-search__button').first();
 
