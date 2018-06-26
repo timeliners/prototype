@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GithubEventCard from '../../components/card/github-event-card';
+import GithubCard from '../../components/github-card';
 
 interface IProps {
 	events: any[],
@@ -8,8 +8,8 @@ interface IProps {
 export default function GithubEventsList(props: IProps) {
 	return (
 		<div>
-			{props.events.map((event) => (
-				<GithubEventCard event={event} />
+			{props.events.map(event => (
+				<GithubCard key={event.id} {...event} />
 			))}
 		</div>
 	);

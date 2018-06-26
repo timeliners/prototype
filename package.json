@@ -38,6 +38,7 @@
 		"codecov": "^3.0.1",
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
+		"jest-cucumber": "^1.0.6",
 		"jest-enzyme": "^6.0.0",
 		"now": "^11.1.7",
 		"npm-run-all": "^4.1.2",
