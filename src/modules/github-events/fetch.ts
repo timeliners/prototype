@@ -11,4 +11,4 @@ export default function fetchGithubEvents(username: string, options?: IOptions) 
 
 	return fetch(`https://api.github.com/users/${username}/events/public?page=${page}`)
 		.then(response => response.json());
-}
+};

@@ -42,7 +42,7 @@ export default class GithubSearchContainer extends React.Component<RouteComponen
 					Enter the exact GitHub username of the person you are looking for
 				</p>
 				<input type="text" className="github-search__input" onChange={this.onInputChange} />
-				<Link className={this.buttonClassName} to={this.state.username}>
+				<Link className={this.buttonClassName} to={`/${this.state.username}`}>
 					see events!
 				</Link>
 			</div>

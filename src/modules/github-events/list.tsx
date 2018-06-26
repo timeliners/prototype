@@ -6,7 +6,6 @@ interface IProps {
 }
 
 export default function GithubEventsList(props: IProps) {
-	console.log(props.events);
 	return (
 		<div>
 			{props.events.map((event) => (

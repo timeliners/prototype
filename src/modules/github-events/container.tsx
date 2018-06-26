@@ -40,10 +40,12 @@ export default class GithubEventsContainer extends React.Component<IProps, IStat
 		this.setState({ page, status: 'pending' });
 
 		return fetchGithubEvents(this.props.match.params.username, { page })
-			.then(response => this.setState({
-				events: this.state.events.concat(response),
-				status: 'fulfilled',
-			}))
+			.then(response => {
+				this.setState({
+					events: this.state.events.concat(response),
+					status: 'fulfilled',
+				});
+			})
 			.catch((error) => {
 				this.setState({ status: 'rejected' });
 			});
@@ -136,11 +138,11 @@ export default class GithubEventsContainer extends React.Component<IProps, IStat
 	 */
 	public render() {
 		return (
-				<div>
-					{this.renderHeader()}
-					<GithubEventsList events={this.state.events} />
-						{this.hasMoreEvents() && <button onClick={this.onNextPageClick} className="Button">load<br />more</button>}
-				</div>
+			<div>
+				{this.renderHeader()}
+				<GithubEventsList events={this.state.events} />
+					{this.hasMoreEvents() && <button onClick={this.onNextPageClick} className="Button">load<br />more</button>}
+			</div>
 		);
 	}
 }
