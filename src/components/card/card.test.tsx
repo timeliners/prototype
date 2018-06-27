@@ -17,4 +17,16 @@ describe('components/card/card', () => {
 		component.contains('Awesome subtitle');
 		component.contains('now');
 	});
+
+	it('renders formatted timestamp with iso timestmaps', () => {
+		const component = shallow(
+			<Card
+				title='My title'
+				subtitle='My subtitle'
+				timestamp='2018-06-27T00:04:09.075Z'
+			/>
+		);
+
+		component.contains('2018-06-27');
+	});
 });
