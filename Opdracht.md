@@ -1,5 +1,6 @@
 # Automated Software Validation
-# Cedric van Putten, Joyce Lam
+
+> Cedric van Putten, Joyce Lam
 
 ## Project
 
@@ -102,7 +103,7 @@ Onze eerste ervaring met BDD/Gherkin zijn over het algemeen “interessant” te
 Wij beiden hebben weinig tot geen ervaring met deze vorm van testen. 
 Het duurde dan ook even voordat alles opgezet was en volledig werkte.
 
-
+```
 Feature: Github Cards
 
 Scenario: Render issue openend
@@ -125,7 +126,7 @@ Scenario: Render pull request opened
   When I render the card
   Then The card title should be Opened pull request
   And The card subtitle should be code/rocks
-
+```
 
 > Dit bestand is [hier te zien](https://github.com/timeliners/prototype/blob/master/src/components/github-card/index.feature)
 
